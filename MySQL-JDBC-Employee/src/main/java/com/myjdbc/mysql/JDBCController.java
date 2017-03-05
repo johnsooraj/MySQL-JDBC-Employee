@@ -9,6 +9,7 @@ public class JDBCController {
 
 	Connection connection;
 	Scanner scanner;
+	Employee employee;
 
 	public JDBCController() {
 		try {
@@ -19,9 +20,17 @@ public class JDBCController {
 			} else {
 				System.exit(0);
 			}
-			
+
 			scanner = new Scanner(System.in);
-			
+			employee = new Employee();
+
+			while (true) {
+				System.out.println("ENTER YOUR OPERATION ?");
+				System.out.println("1-Add new EMPLOYEE \n2-Get EMPLOYEE \n3-Delete EMPLOYEE \n4-Update EMPLOYEE \nAny key to EXIT");
+				int operation = scanner.nextInt();
+				System.out.println("");
+
+			}
 
 		} catch (SQLException e) {
 			e.printStackTrace();
