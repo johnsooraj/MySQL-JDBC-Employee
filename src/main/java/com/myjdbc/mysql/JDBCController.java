@@ -25,10 +25,23 @@ public class JDBCController {
 			employee = new Employee();
 
 			while (true) {
-				System.out.println("ENTER YOUR OPERATION ?");
-				System.out.println("1-Add new EMPLOYEE \n2-Get EMPLOYEE \n3-Delete EMPLOYEE \n4-Update EMPLOYEE \nAny key to EXIT");
+				System.out.println("Enter your Operation ?");
+				System.out.println(
+						"1-Add new EMPLOYEE \n2-Get EMPLOYEE \n3-Delete EMPLOYEE \n4-Update EMPLOYEE \nAny key to EXIT");
 				int operation = scanner.nextInt();
-				System.out.println("");
+				switch (operation) {
+				case 1:
+					break;
+				case 2:
+					break;
+				case 3:
+					break;
+				case 4:
+					break;
+				default:
+					System.exit(0);
+					break;
+				}
 
 			}
 
