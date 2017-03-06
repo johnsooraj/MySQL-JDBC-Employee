@@ -31,6 +31,7 @@ public class JDBCAdministrator {
 				int operation = scanner.nextInt();
 				switch (operation) {
 				case 1:
+					new EmployeeRegistration(connection, scanner, employee);
 					break;
 				case 2:
 					break;
