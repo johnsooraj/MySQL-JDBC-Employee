@@ -5,13 +5,13 @@ import java.sql.DriverManager;
 import java.sql.SQLException;
 import java.util.Scanner;
 
-public class JDBCController {
+public class JDBCAdministrator {
 
 	Connection connection;
 	Scanner scanner;
 	Employee employee;
 
-	public JDBCController() {
+	public JDBCAdministrator() {
 		try {
 			connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/testdatabase", "root", "root");
 
@@ -51,7 +51,7 @@ public class JDBCController {
 	}
 
 	public static void main(String[] args) {
-		new JDBCController();
+		new JDBCAdministrator();
 	}
 
 }
