@@ -34,6 +34,7 @@ public class JDBCAdministrator {
 					new EmployeeRegistration(connection, scanner, employee);
 					break;
 				case 2:
+					new EmployeeSelector(connection, scanner, employee);
 					break;
 				case 3:
 					break;
