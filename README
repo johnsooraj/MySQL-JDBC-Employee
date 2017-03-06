@@ -2,7 +2,7 @@ The Basic Java JDBC Operation For quick Reference.
 
 One POJO Class, 'Employee' its holds the values such as Name,Email,Place,Age
 One Controller, 'JDBCAdministrator' The Class Constructor Create Connection between database,
-Inside a while loop 5 operation can select, key 1,2,3,4 For CRUD operations and 5th key for Exit From Loop,
+Inside a while loop 5 operation can select, Using switch Case 1,2,3,4 For CRUD operations and 5th key for Exit From Loop,
 
 All Exceptions Handled inside Employee DAO(Data Access Object) Class.
 
