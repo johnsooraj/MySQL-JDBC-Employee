@@ -8,17 +8,17 @@ import java.util.Scanner;
 
 public class EmployeeSelector {
 
-	public EmployeeSelector(Connection connection, Scanner scanner, Employee employee) throws SQLException {
+	public EmployeeSelector(Connection connection, Scanner scanner, Employee employee) {
+		try {
 
-		System.out.println("Enter the Name Of Employee - ");
-		scanner.nextLine();
-		String name = scanner.nextLine();
+			System.out.println("Enter the Name Of Employee - ");
+			scanner.nextLine();
+			String name = scanner.nextLine();
 
-		String query = "SELECT * FROM employee WHERE name=?";
-		PreparedStatement preparedStatement = connection.prepareStatement(query);
-		preparedStatement.setString(1, name);
-		ResultSet resultSet = preparedStatement.executeQuery();
-		if (resultSet.first()) {
+			String query = "SELECT * FROM employee WHERE name=?";
+			PreparedStatement preparedStatement = connection.prepareStatement(query);
+			preparedStatement.setString(1, name);
+			ResultSet resultSet = preparedStatement.executeQuery();
 			while (resultSet.next()) {
 				employee.setName(resultSet.getString("name"));
 				employee.setEmail(resultSet.getString("email"));
@@ -26,8 +26,11 @@ public class EmployeeSelector {
 				employee.setAge(resultSet.getByte("age"));
 				System.out.println("\n" + employee);
 			}
-		} else {
-			System.err.println("Employee Not Found");
+
+		} catch (
+
+		SQLException e) {
+			System.err.println(e);
 		}
 	}
 }

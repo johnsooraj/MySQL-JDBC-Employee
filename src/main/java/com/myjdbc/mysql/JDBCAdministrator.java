@@ -37,8 +37,10 @@ public class JDBCAdministrator {
 					new EmployeeSelector(connection, scanner, employee);
 					break;
 				case 3:
+					new EmployeeDelete(connection, scanner, employee);
 					break;
 				case 4:
+					new EmployeeUpdate(connection, scanner, employee);
 					break;
 				default:
 					System.exit(0);
